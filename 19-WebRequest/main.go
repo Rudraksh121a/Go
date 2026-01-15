@@ -13,12 +13,9 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	// fmt.Printf("Type is %T", res)
+	fmt.Printf("Type is %T", res)
 	defer res.Body.Close()
 
-	data, err := io.ReadAll(res.Body)
-	if err != nil {
-		panic(err)
-	}
+	data, _ := io.ReadAll(res.Body)
 	fmt.Println(string(data))
 }
