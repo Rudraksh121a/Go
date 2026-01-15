@@ -16,7 +16,7 @@ func main() {
 	// comma  ok ||  comma error
 	// input, _ := reader.ReadString('\n')  #if we dont care about error we use _ in the place of error
 	// _, err := reader.ReadString('\n')  #if we dont care about input we use _ in the place of input
-	input, err := reader.ReadString('\n')
+	input, _ := reader.ReadString('\n')
 	fmt.Println("Thanks for rating,", input)
 	fmt.Printf("Type of this rating is %T", input)
 }
